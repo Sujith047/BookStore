@@ -1,0 +1,9 @@
+<p>cart works!</p>
+<div *ngIf="getCart().length > 0">
+    <div *ngFor="let book of getCart(); let i=index;">
+        <img class="img" [src]="book.src" [alt]="book.author" width="100" />
+        <p class="cart1">{{i+1}} <br>{{book.name}} <br> {{book.author}}</p>
+        <button *ngIf="isInCart" (click)="removeFromCart()" >Remove from Cart</button>
+    </div>
+</div>
+<div *ngIf="getCart().length == 0">No books in getCart</div>

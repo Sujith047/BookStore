@@ -1,0 +1,18 @@
+<h2>Choose Your Books</h2>
+<!-- <button (click)="isShowing = !isShowing">
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    <ng-container *ngIf="isShowing">Hide Books</ng-container>
+    
+</button> -->
+<!-- <input type="text" [(ngModel)]="myName"> -->
+<!-- <div>{{myName}}</div> -->
+
+
+
+
+<ul *ngIf="isShowing" class="ulist">
+    <ng-container *ngFor="let singleBook of books" class="llist">
+        <app-book  [book] = "singleBook"></app-book>
+</ng-container>
+   
+</ul>

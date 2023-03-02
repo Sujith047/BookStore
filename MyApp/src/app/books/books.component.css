@@ -1,0 +1,25 @@
+/* ul{
+    display :flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    list-style: none;
+    text-overflow: ellipsis;
+    width: 250px ;
+    text-align: center;
+    cursor: pointer;
+}
+
+.img {
+    height: 100px;
+    width: 300px;
+} */
+.ulist{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.llist{
+    text-decoration: none;
+}
