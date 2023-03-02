@@ -24,6 +24,7 @@ constructor(private cartService : CartService) {}
   isInCart : boolean = true;
 
   
+
 removeFromCart() {
   this.isInCart = true;
   this.cartService.remove(this.book);

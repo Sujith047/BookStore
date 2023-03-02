@@ -8,8 +8,9 @@ import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
-    path: "", 
-    component: BooksComponent
+    path: "book", 
+    component: BooksComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:"cart",
@@ -23,7 +24,8 @@ const routes: Routes = [
   {
     path:"register",
     component:RigisterComponent
-  }
+  },
+  {path:'',redirectTo:'login',pathMatch:'full'}
 ];
 
 @NgModule({

@@ -19,9 +19,10 @@ export class AuthService {
 
   login(form: LoginForm){
 
-    if(this.isLoading) return;
+    //if(this.isLoading) return;
 
     this.isLoading = true;
+  
 
     const auth = getAuth();
 signInWithEmailAndPassword(auth, form.email,form.password)
@@ -29,7 +30,7 @@ signInWithEmailAndPassword(auth, form.email,form.password)
     // Signed in 
     //const user = userCredential.user;
     this.isAuthenticated = true;
-    this.router.navigate(['']);
+    this.router.navigate(['book']);
    
     // ...
   })
@@ -52,8 +53,10 @@ signInWithEmailAndPassword(auth, form.email,form.password)
     const auth = getAuth();
 createUserWithEmailAndPassword(auth, form.email, form.password)
   .then((userCredential) => {
+    this.router.navigate(['login']);
     // Signed in 
-  this.isAuthenticated = true;
+  // this.isAuthenticated = true;
+  
     
     // const user = userCredential.user;
     // ...
